@@ -1,0 +1,46 @@
+// i want to make database and collections
+const db="Ecommerce";
+const collection="customer";
+
+use(name_db); // this for create database
+db.createCollection(collection); // this for create collerations
+
+// this for one insert in database
+db.customer.insertOne({
+    "_id":1, // this for primary key
+    'name_customer':{
+        'first':"Iqbal Ramadhan",
+        'last':"Anniswa"
+    },
+    'email':"iqbalramadhan@suratemail.com",
+    'phone':'+43891342323122',
+    'created_account_at':'20-11-2021' //date format DD-MM-YYYY
+});
+
+// this for insert many data
+db.customer.insertMany([
+    {
+    "_id":2, // this for primary key
+    'name_customer':
+        {
+        'first':"Kayaba",
+        'last':"Akihiko"
+        },
+    'email':"kayabaakihiko@hotemail.com",
+    'phone':'+3891342323122',
+    'created_account_at':'10-10-2021' //date format DD-MM-YYYY
+    },
+    {
+    "_id":3, // this for primary key
+    'name_customer':
+        {
+        'first':"Otong",
+        'last':"Surotong"
+        },
+    'email':"otongsurotong@suratemail.com",
+    'phone':'+23891342323122',
+    'created_account_at':'20-12-2021' //date format DD-MM-YYYY
+    },
+]);
+
+

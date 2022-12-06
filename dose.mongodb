@@ -1,0 +1,55 @@
+const database_name="Ecommerce"; // name for database
+const collection="seller"; // name for collection
+
+// this data
+
+use(database_name); // this for name collection
+db.createCollection('seller'); // this for collection
+
+// i want to insert data for seller just one
+
+db.seller.insertOne(
+    {
+        '_id':1,
+        'name_seller':"MIXUE Ice Cream & Tea - UPN Rungkut Madya",
+        'contact':{
+            "phone":'0878-0200-4890',
+            "email":"mixue",
+            'addreas':"Jl. Rungkut Asri Tim. XVIII No.38 Rungkut Kidul, Medokan Ayu, Kota SBY, Jawa Timur 60293",
+        },
+
+    }
+);
+
+
+// i want to insert data for seller just many data seller
+db.seller.insertMany([
+    {
+        '_id':2,
+        'name_seller':"Gacoan Manyar",
+        'contact':{
+            "phone":'0878-0200-2534',
+            "email":"mixue@hotmail.com",
+            'addreas':"Jl. Manyar Kertoarjo III No.109, Manyar Sabrangan, Kec. Mulyorejo, Kota SBY, Jawa Timur 60285",
+        },
+
+    },
+
+    {
+        '_id':3,
+        'name_seller':"Kopi Titik Koma Rungkut",
+        'contact':{
+            "phone":'0811-1202-206',
+            "email":"KopiTitikKoma@gmail.com",
+            'addreas':"Jl. Rungkut Madya No.195, Rungkut Kidul, Kec. Rungkut, Kota SBY, Jawa Timur 60293",
+        },
+
+    }
+
+
+
+]);
+
+
+
+
